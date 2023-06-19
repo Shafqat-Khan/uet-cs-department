@@ -1,0 +1,6 @@
+::ng-deep body {
+    background-color: lightgray;
+    min-height: 100%;
+    overflow-x: hidden;
+  }
+  

@@ -1,0 +1,13 @@
+<div class="article-content" *ngIf="articles.length > 0">
+    <mat-card class="article" *ngFor="let article of articles">
+      <div class="content">
+        <mat-card-content>
+          <img [src]="article.link" alt="" srcset="" />
+          <a class="heading" href="#">{{ article.heading }}</a>
+          <br />
+          <button mat-raised-button class="custom-button">Read Article</button>
+        </mat-card-content>
+      </div>
+    </mat-card>
+  </div>
+  
