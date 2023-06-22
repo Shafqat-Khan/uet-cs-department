@@ -7,9 +7,5 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'uet-cs-department';
-  storedArticle: any[] = [];
 
-  onArticleAdded(article: any) {
-    this.storedArticle.push(article);
-  }
 }

@@ -1,6 +1,5 @@
 <app-navbar></app-navbar>
 <main>
-  <app-home-slider (articleCreated)="onArticleAdded($event)"></app-home-slider>
-  <app-create-article [articles]="storedArticle"></app-create-article>
+  <router-outlet></router-outlet>
 </main>
 <app-footer></app-footer>

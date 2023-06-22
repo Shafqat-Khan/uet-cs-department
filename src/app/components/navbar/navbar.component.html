@@ -1,37 +1,70 @@
 <mat-toolbar>
-    <mat-toolbar-row class="icons">
-      <div class="contact-info">
-        <span class="small-font">+92 3067932347</span>
-        <span class="small-font">shafqat333khan@gmail.com</span>
-        <span class="small-font">+92 3067932347</span>
+  <mat-toolbar-row class="icons">
+    <div class="contact-info">
+      <span class="small-font">+92 3067932347</span>
+      <span class="small-font">shafqat333khan@gmail.com</span>
+      <span class="small-font">+92 3067932347</span>
+    </div>
+    <div fxLayout="row" fxLayoutAlign="end center">
+      <button mat-mini-fab class="nav-icon">
+        <mat-icon>facebook</mat-icon>
+      </button>
+      <button mat-mini-fab class="nav-icon">
+        <mat-icon>facebook</mat-icon>
+      </button>
+      <button mat-mini-fab class="nav-icon">
+        <mat-icon>linkdin</mat-icon>
+      </button>
+      <button mat-mini-fab class="nav-icon">
+        <mat-icon>wifi</mat-icon>
+      </button>
+      <button mat-mini-fab class="nav-icon">
+        <mat-icon>facebook</mat-icon>
+      </button>
+    </div>
+  </mat-toolbar-row>
+  <mat-toolbar-row>
+    <img src="/assets/uet-logo.png" alt="uet-logo" class="logo" />
+    <div class="menu-items">Home</div>
+    <span class="menu-items">
+      About <mat-icon>arrow_drop_down</mat-icon>
+      <div class="submenu">
+        <span>Item dddddddddddd3</span>
+        <span>Item 3</span>
+        <span>Item 3</span>
       </div>
-      <div fxLayout="row" fxLayoutAlign="end center" >
-        <button mat-mini-fab class="nav-icon">
-          <mat-icon>facebook</mat-icon>
-        </button>
-        <button mat-mini-fab class="nav-icon">
-          <mat-icon>facebook</mat-icon>
-        </button>
-        <button mat-mini-fab class="nav-icon">
-          <mat-icon>linkdin</mat-icon>
-        </button>
-        <button mat-mini-fab class="nav-icon">
-          <mat-icon>wifi</mat-icon>
-        </button>
-        <button mat-mini-fab class="nav-icon">
-          <mat-icon>facebook</mat-icon>
-        </button>
+    </span>
+    <span class="menu-items">Faculty</span>
+    <span class="menu-items">
+      Academics
+      <mat-icon>arrow_drop_down</mat-icon>
+      <div class="submenu">
+        <span>Item dddddddddddd3</span>
+        <span>Item 3</span>
+        <span>Item 3</span>
       </div>
-    </mat-toolbar-row>
-    <mat-toolbar-row fxLayout="row" fxLayoutAlign="space-between center">
-      <div>
-        <img src="/assets/uet-logo.png" alt="uet-logo" class="logo">
-        <img src="/assets/department-logo.png" alt="department-logo" class="logo">
+    </span>
+    <span class="menu-items">
+      Announcements
+      <mat-icon>arrow_drop_down</mat-icon>
+      <div class="submenu">
+        <span>Item dddddddddddd3</span>
+        <span>Item 3</span>
+        <span>Item 3</span>
       </div>
-    </mat-toolbar-row>
-  </mat-toolbar>
-  
-
+    </span>
+    <span class="menu-items">
+      Students
+      <mat-icon>arrow_drop_down</mat-icon>
+      <div class="submenu">
+        <span>Item dddddddddddd3</span>
+        <span>Item 3</span>
+        <span>Item 3</span>
+      </div>
+    </span>
+    <img src="/assets/department-logo.png" alt="department-logo" class="logo" />
+  </mat-toolbar-row>
+</mat-toolbar>
 
 <!-- <mat-toolbar>
     <mat-toolbar-row class="icons">
@@ -63,7 +96,6 @@
         <img src="/assets/department-logo.png" alt="department-logo" class="logo">
     </mat-toolbar-row>
 </mat-toolbar> -->
-
 
 <!-- <textarea rows="6" [(ngModel)]="enteredValue"></textarea>
 <hr>

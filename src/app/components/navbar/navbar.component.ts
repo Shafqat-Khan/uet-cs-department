@@ -6,9 +6,5 @@ import { Component } from "@angular/core";
     styleUrls: ['./navbar.component.css']
 })
 export class NavbarComponent{
-    enteredValue = '';
-    defaultText = "Default Text";
-    onAddText(){
-        this.defaultText = this.enteredValue;
-    }
+
 }

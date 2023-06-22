@@ -1,13 +1,15 @@
-<div class="article-content" *ngIf="articles.length > 0">
-    <mat-card class="article" *ngFor="let article of articles">
-      <div class="content">
-        <mat-card-content>
-          <img [src]="article.link" alt="" srcset="" />
-          <a class="heading" href="#">{{ article.heading }}</a>
-          <br />
-          <button mat-raised-button class="custom-button">Read Article</button>
-        </mat-card-content>
-      </div>
-    </mat-card>
-  </div>
-  
+<div class="expand" *ngIf="articles.length > 0">
+  <mat-card class="article" *ngFor="let article of articles">
+    <div class="content">
+      <mat-card-content>
+        <img [src]="article.link" alt="" srcset="" />
+        <a class="heading" href="#">{{ article.heading }}</a>
+        <br />
+        <button mat-flat-button color="primary" class="custom-button">Read Article</button>
+        <button mat-flat-button color="warn" class="custom-button" (click)="onDelete(article._id)">Delete Article</button>
+        <button mat-flat-button color="primary" class="custom-button" routerLink="/create">Add Article</button>
+        <button mat-flat-button color="primary" class="custom-button" [routerLink]="['/edit', article._id]">Edit Article</button>
+      </mat-card-content>
+    </div>
+  </mat-card>
+</div>

@@ -5,9 +5,13 @@
 
 .mat-toolbar-row:nth-child(2) {
     display: flex;
-    justify-content: space-evenly;
+    align-items: center;
     height: 80px;
+    justify-content: space-evenly;
+    padding: 0 255px;
 }
+
+  
 
 .small-font {
     font-size: 12px;
@@ -15,9 +19,11 @@
     margin-right: 20px;
   }
 
+
+
   .logo {
-    width: 40px; 
-    height: 40px;
+    width: 70px; 
+    height: 70px;
   }
 
 .icons {
@@ -44,3 +50,30 @@ button.nav-icon:hover {
     background-color: white;
 }
 
+.submenu {
+    position: absolute;
+    width: auto;
+    background-color: lightgray;
+    margin-top: 25px;
+    opacity: 0;
+    z-index: -999;
+    transition: all ease-in 0.5s;
+}
+span:hover .submenu {
+    z-index: 99;
+    opacity: 1;
+}
+.submenu span {
+    display: block;
+    padding: 0 20px;
+    border: 1px solid white;
+}
+
+.submenu span:hover {
+    background-color: #35244d;
+    color: white;
+}
+
+.menu-items:hover {
+    color: #472774;
+}

@@ -1,0 +1,15 @@
+<mat-card>
+  <form (submit)="onAddText(postForm)" #postForm="ngForm">
+    <mat-form-field>
+      <textarea matInput type="text" name="link" [ngModel]="article.link" required #link="ngModel" placeholder="Link of Article"></textarea>
+      <mat-error *ngIf="link.invalid">"Please upload an image</mat-error>
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput type="text" name="heading" [ngModel]="article.heading" required minlength="3" #heading="ngModel" placeholder="Heading"/>
+      <mat-error *ngIf="heading.invalid">"Please upload an image</mat-error>
+    </mat-form-field>
+    <button mat-flat-button class="custom-button" type="submit">
+      show
+    </button>
+  </form>
+</mat-card>
