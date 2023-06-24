@@ -1,11 +1,31 @@
 <mat-card>
-  <form (submit)="onAddText(postForm)" #postForm="ngForm">
+  <mat-spinner *ngIf="isLoading"></mat-spinner>
+  <form (submit)="onAddText(postForm)" #postForm="ngForm" *ngIf="!isLoading">
+    <div class="display-image">
+      <button mat-button type="button" (click)="imagePicker.click()">Pick Image</button>
+      <input type="file" #imagePicker>
+    </div>
     <mat-form-field>
-      <textarea matInput type="text" name="link" [ngModel]="article.link" required #link="ngModel" placeholder="Link of Article"></textarea>
+      <input 
+        matInput 
+        type="text" 
+        name="link" 
+        [ngModel]="article?.link" 
+        required 
+        #link="ngModel" 
+        placeholder="Link of Article"/>
       <mat-error *ngIf="link.invalid">"Please upload an image</mat-error>
     </mat-form-field>
     <mat-form-field>
-      <input matInput type="text" name="heading" [ngModel]="article.heading" required minlength="3" #heading="ngModel" placeholder="Heading"/>
+      <input 
+        matInput 
+        type="text" 
+        name="heading" 
+        [ngModel]="article?.heading" 
+        required 
+        minlength="3" 
+        #heading="ngModel" 
+        placeholder="Heading"/>
       <mat-error *ngIf="heading.invalid">"Please upload an image</mat-error>
     </mat-form-field>
     <button mat-flat-button class="custom-button" type="submit">

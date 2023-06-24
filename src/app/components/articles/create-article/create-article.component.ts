@@ -10,15 +10,18 @@ import { Subscription } from "rxjs";
 })
 
 export class CreateArticleComponent implements OnInit, OnDestroy {
-    articles: Article[] = []
+    articles: Article[] = [];
+    isLoading = false;
     private articleSub: Subscription;
     constructor(public articlesService: ArticlesService){
         this.articleSub = new Subscription();
     }
 
     ngOnInit() {
+        this.isLoading = true;
         this.articlesService.getArticle();
         this.articleSub = this.articlesService.getArticleUpdateListener().subscribe((articles:Article[])=>{
+            this.isLoading = false;
             this.articles = articles
         });
     }

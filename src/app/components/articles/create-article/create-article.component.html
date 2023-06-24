@@ -1,4 +1,5 @@
-<div class="expand" *ngIf="articles.length > 0">
+<mat-spinner *ngIf="isLoading"></mat-spinner>
+<div class="expand" *ngIf="articles.length > 0 && !isLoading">
   <mat-card class="article" *ngFor="let article of articles">
     <div class="content">
       <mat-card-content>
